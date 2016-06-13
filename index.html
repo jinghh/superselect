@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>下拉多选</title>
+	<meta charset='utf-8'>
+	<script src='http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js'></script>
+	<script src='src/checkboxselect.js'></script>
+</head>
+<body>
+<form method="get" action="www.baidu.com">
+	测试输入框1 :<input id="ipt"/>
+	测试输入框2 :<input id="ipt2"/>
+	测试输入框3 :<input id="ipt3"/>
+	测试输入框4 :<input id="ipt4"/>
+	测试输入框5 :<input id="ipt5"/>
+	<input type="submit">
+</form>
+<style>
+    .show_superSelect {
+      box-shadow: 1px 1px 3px 1px #999;
+      max-height:200px;
+      overflow-y: scroll;
+    }
+    .show_superSelect div.active {
+        background: #3498db;
+        color: #fff;
+    }
+</style>
+<script type="text/javascript">
+	$(function(){
+		var arr=[
+				{"text":'北京',"value":0,"name":"n1","checked":""},
+				{"text":'上海',"value":1,"name":"n2","checked":""},
+				{"text":'天津',"value":2,"name":"n3","checked":"checked"},
+				{"text":'武汉',"value":3,"name":"n4","checked":""},
+				{"text":'武汉',"value":3,"name":"n4","checked":""},
+				{"text":'武汉',"value":3,"name":"n4","checked":""},
+				{"text":'武汉',"value":3,"name":"n4","checked":""},
+				{"text":'武汉',"value":3,"name":"n4","checked":""},
+				{"text":'武汉',"value":3,"name":"n4","checked":""},
+				{"text":'武汉',"value":3,"name":"n4","checked":""},
+				{"text":'广州',"value":4,"name":"n5","checked":"checked"}
+				];
+		var arr2=[
+				{"text":'重庆',"value":0,"name":"n1","checked":""},
+				{"text":'成都',"value":0,"name":"n2","checked":""},
+				{"text":'深圳',"value":0,"name":"n3","checked":""},
+				{"text":'哈尔滨',"value":0,"name":"n4","checked":"checked"},
+				{"text":'济南',"value":0,"name":"n5","checked":""}
+				];
+		$('#ipt').superSelect(arr);
+		$('#ipt2').superSelect(arr2);
+		$('#ipt3').superSelect(arr);
+		$('#ipt4').superSelect(arr);
+		$('#ipt5').superSelect(arr);
+	});
+</script>
+</body>
+</html>
